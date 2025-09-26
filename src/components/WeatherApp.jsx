@@ -11,6 +11,7 @@ function WeatherApp() {
   const fetchWeather = async () => {
     try {
       setError("");
+      // const apiKey = process.env.VITE_WEATHER_API_KEY;
       const apiKey = import.meta.env.VITE_WEATHER_API_KEY; 
       // const apiKey = import.meta.env.WHEATHERFREEAPI; 
       
@@ -28,7 +29,6 @@ function WeatherApp() {
   };
   return (
     <div style={{ textAlign: "center", marginTop: "50px", fontFamily: "Arial" }}>
-      {/* <h1>Weather App</h1> */}
       <input 
         type="text"
         placeholder="Enter a city..."
@@ -75,3 +75,5 @@ function WeatherApp() {
 }
 
 export default WeatherApp
+
+
