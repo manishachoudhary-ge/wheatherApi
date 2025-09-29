@@ -1,5 +1,4 @@
 export default {
-     preset: 'vite-jest',
   testEnvironment: 'jsdom',
   testEnvironment: "jsdom"
   , // enables DOM-like environment
