@@ -18,7 +18,7 @@
   margin-top: 30px;
   border-radius: 20px;
   background-color:transparent;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 0px 15px;
   display: flex;
   text-align: center;
   align-content: center;
@@ -55,11 +55,45 @@
   /* margin-right: 330px; */
   /* border-radius: 10px; */
  }
- .card{
+ /* .card{
   img{
   width: 50px;
  }
+ } */
+
+ .currWeather{
+    margin-top: 60px;
+    text-align: left;
+    line-height: 12px;
  }
+
+ .CurrImg{
+    margin-top: 70px;
+ }
+.currWeather{
+    .tod{
+        font-weight: lighter;
+    }
+}
+.currWeather{
+    h2{
+        font-size: xx-large;
+    }
+}
+.currWeather{
+    p:a{
+      font-family: Arial, sans-serif;
+    }
+}
+.card{
+    .CardDy{
+        font-weight: 600;
+        font-size: small;
+        padding-top: 2px;
+    }
+}
+
+
 
 
  

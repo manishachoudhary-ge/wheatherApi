@@ -81,8 +81,11 @@ function WeatherApp() {
       ...dailyData[day]
     }));
   };
-
-
+   const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      fetchWeather();
+    }
+  };
 
   return (
     <div style={{ textAlign: "center", marginTop: "50px", fontFamily: "Arial" }}>
@@ -91,6 +94,7 @@ function WeatherApp() {
         placeholder="Enter a city..."
         value={city}  
         onChange={(e) => setCity(e.target.value)}
+        onKeyDown={handleKeyDown}
         style={{ padding: "5px", borderRadius: "10px", marginRight: "10px" }}
       />
       <button onClick={fetchWeather} style={{ padding: "5px 15px", borderRadius: "15px" }}>
@@ -100,7 +104,7 @@ function WeatherApp() {
       {error && <p style={{ color: "red" }}>{error}</p>}
       {weather && (
         <div className='container'> 
-          <div>
+          <div className='CurrImg'>
             <img
                 src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`}
                 alt="weather icon"
@@ -108,8 +112,8 @@ function WeatherApp() {
           </div>
 
           <div>
-            <div >
-              <p>Today</p>
+            <div className='currWeather'>
+              <p className='tod'>Today</p>
               <h2>{weather.name}</h2>
               <p>Temperature: {Math.round(weather.main.temp)}°C</p>
               <p>{weather.weather[0].description}</p>

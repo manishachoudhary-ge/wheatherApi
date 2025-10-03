@@ -1,3 +1,33 @@
+import React from 'react';
+
+function Cards({ day, icon, temp }) {
+  return (
+    <div className="card">
+      <p className='CardDy'>{day}</p>
+      <img
+        src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+        alt="weather icon"
+        style={{ width: '40px', height: '40px'}}
+      />
+      <p>{temp}°C</p>
+    </div>
+  );
+}
+
+export default Cards;
+
+
+
+
+
+
+
+
+
+
+
+
+
 // import React from 'react'
 
 // function Cards({weather}) {
@@ -17,22 +47,3 @@
 // }
 
 // export default Cards
-
-
-import React from 'react';
-
-function Cards({ day, icon, temp }) {
-  return (
-    <div className="card">
-      <p>{day}</p>
-      <img
-        src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
-        alt="weather icon"
-        style={{ width: '40px', height: '40px' }}
-      />
-      <p>{temp}°C</p>
-    </div>
-  );
-}
-
-export default Cards;
